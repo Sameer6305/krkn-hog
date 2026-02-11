@@ -1,7 +1,6 @@
+ARG TARGETPLATFORM=linux/amd64
 FROM --platform=$TARGETPLATFORM fedora:40
 
-ARG TARGETPLATFORM
-ARG TARGETARCH
 
 RUN dnf update -y && \
     dnf install --setopt=install_weak_deps=False -y \
