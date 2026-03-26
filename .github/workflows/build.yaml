@@ -41,4 +41,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' && startsWith(github.ref, 'refs/tags/') }}
           tags: |
             quay.io/krkn-chaos/krkn-hog:latest
-            quay.io/krkn-chaos/krkn-hog:${{ github.ref_name }}
+            quay.io/krkn-chaos/krkn-hog:${{ github.ref_type == 'tag' && github.ref_name || format('sha-{0}', github.sha) }}
