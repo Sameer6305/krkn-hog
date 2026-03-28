@@ -1,0 +1,12 @@
+# Normalize text files by default
+* text=auto
+
+# Keep shell scripts LF-only for Bash compatibility across platforms
+*.sh text eol=lf
+
+# Keep CI definitions LF-only to avoid cross-platform diff churn
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Containerfile should remain LF-only
+Containerfile text eol=lf

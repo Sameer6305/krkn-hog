@@ -1,0 +1,11 @@
+# Local runtime artifacts
+output-*.yaml
+hog-jobfile-*.conf
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Common local logs
+*.log
